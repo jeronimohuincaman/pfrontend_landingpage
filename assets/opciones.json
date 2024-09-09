@@ -1,0 +1,24 @@
+{
+    "options": [
+        {
+            "id": 1,
+            "descripcion": "Carnet de crack"
+        },
+        {
+            "id": 2,
+            "descripcion": "Aprobado"
+        },
+        {
+            "id": 3,
+            "descripcion": "Desaprobado"
+        },
+        {
+            "id": 4,
+            "descripcion": "Regular"
+        },
+        {
+            "id": 5,
+            "descripcion": "Libre"
+        }
+    ]
+}

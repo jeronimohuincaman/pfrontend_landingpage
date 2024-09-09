@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --primary-bg-color: rgb(0, 174, 255);
+    --secondary-bg-color: rgba(128, 128, 128, 0.8);
+    --footer-bg-color: #333;
+    --text-color: #fff;
+    --image-border-radius: 10px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(0, 174, 255);
+    background-color: var(--primary-bg-color);
 }
 
 .container {
@@ -10,28 +18,30 @@ body {
 }
 
 .shadow-title {
-    background-color: rgba(128, 128, 128, 0.8);
+    background-color: var(--secondary-bg-color);
 }
 
 footer {
     margin-top: auto;
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
 }
 
 .images-container {
     display: flex;
     flex-direction: row;
-    gap: 1;
+    gap: 1rem;
     height: 500px;
     margin: 5px;
     padding: 20px;
     overflow: hidden;
+    justify-content: center;
 }
 
 .image {
-    width: 100%;
+    width: 30%;
     margin: 5px;
     padding: 5px;
-
 }
 
 img {
@@ -39,5 +49,22 @@ img {
     height: 100%;
     object-fit: fill;
     transition: all 200ms ease-in-out;
-    border-radius: 10px;
+    border-radius: var(--image-border-radius);
+}
+
+@media (max-width: 768px) {
+    .images-container {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .image {
+        width: 80%;
+        height: auto;
+    }
+
+    img {
+        height: auto;
+    }
 }
